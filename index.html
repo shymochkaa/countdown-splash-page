@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <title>Countdown to 2025!</title>
+
+    <!-- Google fonts -->
+
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link href="https://fonts.googleapis.com/css2?family=Agu+Display&display=swap" rel="stylesheet" />
+    <!-- Font awesome  -->
+
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.1/css/all.min.css"
+        integrity="sha512-5Hs3dF2AEPkpNAR7UiOHba+lRSJNeM2ECkwxUIxC1Q/FLycGTbNapWXB4tP889k5T5Ju8fs4b1P5z/iB4nMfSQ=="
+        crossorigin="anonymous" referrerpolicy="no-referrer" />
+
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <link href="https://fonts.googleapis.com/css?family=Source+Sans+Pro:300,400,900&display=swap" rel="stylesheet" />
+
+    <link href="styles.css" rel="stylesheet" />
+</head>
+
+<body>
+    <section class="intro">
+        <div>
+            <h1>Welcome to the Countdown to 2025!</h1>
+
+            <div id="countdown" class="countdown-container">
+                <div class="countdown-item">
+                    <span class="countdown-number" id="days">00</span>
+                    <span class="countdown-label">Days</span>
+                </div>
+                <div class="countdown-item">
+                    <span class="countdown-number" id="hours">00</span>
+                    <span class="countdown-label">Hours</span>
+                </div>
+                <div class="countdown-item">
+                    <span class="countdown-number" id="minutes">00</span>
+                    <span class="countdown-label">Minutes</span>
+                </div>
+                <div class="countdown-item">
+                    <span class="countdown-number" id="seconds">00</span>
+                    <span class="countdown-label">Seconds</span>
+                </div>
+            </div>
+        </div>
+
+        <p class="countdown-text">
+            The clock is ticking! Make your resolutions, share your photos, and get
+            ready to welcome 2025 with open arms.
+        </p>
+
+        <p class="top-text">Let’s celebrate the new year together in style 🎉</p>
+    </section>
+
+    <main class="main-content">
+        <p class="main-emoji">🎄✨🤶</p>
+        <h2>Share Your New Year’s Spirit</h2>
+        <p>
+            What are your hopes and dreams for 2025? Share your resolutions or
+            upload a celebratory picture to join the global celebration!
+        </p>
+        <form>
+            <input type="text" required placeholder="Your Name" aria-label="Name" />
+            <textarea class="textarea-resolution" placeholder="What's your resolution?" aria-label="Resolution"
+                required></textarea>
+            <label for="file-upload" class="file-upload-label">
+                <span><i class="fa-solid fa-upload"></i>
+                    <span id="file-chosen">Chosen file: No file chosen</span></span>
+            </label>
+            <input id="file-upload" type="file" style="display: none" />
+            <input id="file-upload" class="file-upload-input" type="file" required accept="image/png, image/jpg"
+                aria-label="Upload your celebratory picture" />
+            <button class="btn btn-primary">Submit</button>
+        </form>
+
+        <p class="fine-print">
+            By sharing your resolutions and pictures, you’ll inspire others to make
+            2025 their best year yet!
+        </p>
+    </main>
+
+    <script src="index.js"></script>
+</body>
+
+</html>

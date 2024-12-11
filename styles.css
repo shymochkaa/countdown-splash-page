@@ -1,0 +1,256 @@
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+}
+
+body {
+  font-family: "Agu Display", serif;
+  color: #6d3c22;
+  margin: 0;
+  background: #e0ad89;
+}
+
+/* =================
+    Typography 
+   ================= */
+
+h1 {
+  font-size: 2.5rem;
+  font-weight: 400;
+  text-shadow: 0 2px #9f161a;
+  display: block;
+}
+
+h2 {
+  font-size: 2.25rem;
+  margin: 0.167em 0;
+}
+
+p {
+  font-size: 1.125rem;
+  line-height: 1.35;
+}
+
+.countdown-text {
+  font-weight: 900;
+}
+
+.countdown-text,
+.top-text {
+  text-transform: uppercase;
+}
+
+.top-text {
+  font-size: 0.875rem;
+  font-weight: 900;
+  padding-top: 0.25em;
+  border-top: 5px solid;
+  order: -1;
+  margin: 0 auto;
+}
+
+.fine-print {
+  font-size: 0.75rem;
+  letter-spacing: 1px;
+}
+
+/* =================
+    Flex containers
+   ================= */
+
+.intro,
+.main-content {
+  display: flex;
+  flex-direction: column;
+  padding-left: 2em;
+  padding-right: 2em;
+}
+
+/* =================
+    Intro
+   ================= */
+
+.intro {
+  position: relative;
+  justify-content: space-between;
+  min-height: 250px;
+  text-align: center;
+  color: #e0ad89;
+  padding-bottom: 1.5em;
+}
+
+.intro::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: #9f161a url("images/new-year-bg.jpg");
+  background-size: cover;
+  filter: blur(10px);
+  z-index: -1;
+}
+
+/* =================
+    Countdown
+   ================= */
+
+.countdown-container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 0.5em;
+  margin: 1em 0;
+}
+
+.countdown-item {
+  text-align: center;
+  background: linear-gradient(135deg, #9f161a, #6d3c22);
+  border-radius: 10px;
+  padding: 0.5em 1em;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
+  color: #e0ad89;
+}
+
+.countdown-number {
+  font-size: 2rem;
+  font-weight: 900;
+}
+
+.countdown-label {
+  font-size: 0.7rem;
+  font-weight: 300;
+  display: block;
+}
+
+/* ====================
+    Main content
+   ==================== */
+
+.main-content {
+  align-items: center;
+  padding-top: 2.5em;
+  text-align: center;
+}
+
+.main-emoji {
+  margin: 0;
+  font-size: 5rem;
+  text-shadow: 0 2px #9f161a;
+}
+
+.main-content p,
+form {
+  max-width: 450px;
+}
+
+/* =================
+    Form
+   ================= */
+
+input,
+button,
+.textarea-resolution,
+.file-upload-label {
+  font-family: inherit;
+  width: 100%;
+  border-radius: 5px;
+}
+
+input {
+  padding: 0.5em;
+  margin-bottom: 0.75em;
+  border: 2px solid #d1d5db;
+}
+
+input:focus,
+.textarea-resolution:focus {
+  outline: none;
+  border-color: #9f161a;
+  background-color: #e6e8ec;
+}
+
+.textarea-resolution {
+  resize: none;
+  padding: 1em 0.5em;
+  border: 2px solid #d1d5db;
+}
+
+input#file-upload[type="file"] {
+  display: none;
+}
+
+.file-upload-label {
+  display: inline-block;
+  border: 1px solid #6d3c22;
+  padding: 1em 0.5em;
+  cursor: pointer;
+  background-color: #6d3c2224;
+}
+
+.btn {
+  text-transform: uppercase;
+  font-weight: 900;
+  letter-spacing: 2px;
+  padding: 1em 0;
+  border: none;
+  cursor: pointer;
+}
+
+.btn-primary {
+  color: #d2b9a6;
+  background: #9f161a;
+  margin-top: 1em;
+}
+
+.btn-primary:hover,
+.btn-primary:focus {
+  background-color: #a3171c;
+}
+
+/* =================
+    Media queries 
+   ================= */
+
+@media (min-width: 950px) {
+  body {
+    display: flex;
+  }
+
+  h1 {
+    font-size: 4vw;
+    margin-bottom: 2vh;
+  }
+
+  h2 {
+    font-size: 2.625rem;
+  }
+
+  .countdown-text {
+    font-size: 1.25rem;
+  }
+
+  .intro,
+  .main-content {
+    width: 50%;
+  }
+
+  .intro {
+    min-height: 100vh;
+  }
+
+  .main-content {
+    justify-content: center;
+    padding-top: 0;
+  }
+
+  .countdown-number {
+    font-size: 4vw;
+  }
+
+  .countdown-label {
+    font-size: 1.2rem;
+  }
+}
